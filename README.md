@@ -32,7 +32,10 @@ pascal_voc中需要修改自己的标签，标签请用小写字母。
 ## 测试
 ### 放置模型
 将训练得到的py-faster-rcnn/output/faster_rcnn_alt_opt/***_trainval中ZF的caffemodel拷贝至py-faster-rcnn/data/faster_rcnn_models（如果没有这个文件夹，就新建一个）
-### 修改标签
+### 放置测试图片
+im_names改为自己要测试的文件名
+测试图片放在py-faster-rcnn/data/demo中
+### 修改标签1
 修改：py-faster-rcnn/tools/demo.py
 其中CLASSES改为自己的标签。
 随后执行
