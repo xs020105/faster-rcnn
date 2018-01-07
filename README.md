@@ -47,7 +47,7 @@ pascal_voc中需要修改自己的标签，标签请用小写字母。
 ### 放置测试图片
 im_names改为自己要测试的文件名
 测试图片放在py-faster-rcnn/data/demo中
-### 修改标签1
+### 修改标签
 修改：py-faster-rcnn/tools/demo.py
 其中CLASSES改为自己的标签。
 随后执行
