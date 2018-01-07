@@ -10,6 +10,8 @@ make
 cd ../caffe-fast-rcnn
 make -j8 && make pycaffe
 ```
+随后将PYTHONPATH添加到环境变量中：
+export PYTHONPATH=~/py-faster-rcnn/caffe-fast-rcnn/python:$PYTHONPATH 
 ## 数据准备
 ### 数据集放置
 自己的数据集可以放在py-faster-rcnn/data/VOCdevkit2007/VOC2007中。
