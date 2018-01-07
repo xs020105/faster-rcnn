@@ -14,9 +14,19 @@ make -j8 && make pycaffe
 ```bash
 export PYTHONPATH=~/py-faster-rcnn/caffe-fast-rcnn/python:$PYTHONPATH 
 ```
+配置完成后本人对的bashrc如下：
+```bash
+export CUDA_HOME=/usr/local/cuda
+export PATH=$PATH:$CUDA_HOME/bin
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+# export PYTHONPATH=/home/nanfeicaffe/py-faster-rcnn/caffe-fast-rcnn/python/caffe:$PYTHONPATH 
+export PYTHONPATH=/home/nanfeicaffe/py-faster-rcnn/caffe-fast-rcnn/python:$PYTHONPATH 
+```
 ## 数据准备
 ### 数据集放置
 自己的数据集可以放在py-faster-rcnn/data/VOCdevkit2007/VOC2007中。
+py-faster-rcnn/data/VOCdevkit2007/VOC2007/ImageSets/Main/trainval.txt存放训练的序号。
+py-faster-rcnn/data/VOCdevkit2007/VOC2007/ImageSets/Main/test.txt存放测试的序号。
 ### 修改类别参数
 在py-faster-rcnn/models/pascal_voc/ZF/faster_rcnn_alt_opt/stage1_fast_rcnn_train.pt和stage2_fast_rcnn_train.pt中修改所有num_class值为自己的类别数量加一。
 bbox_pred层的num_output改为类别数加一再乘以4。
