@@ -25,8 +25,16 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 export PYTHONPATH=/home/nanfeicaffe/py-faster-rcnn/caffe-fast-rcnn/python:$PYTHONPATH 
 ```
 ## 数据准备
+## 预训练模型
+下载ImageNet数据集下预训练得到的模型参数（用来初始化）
+提供一个百度云地址：http://pan.baidu.com/s/1hsxx8OW
+解压，然后将该文件放在py-faster-rcnn\data下
 ### 数据集放置
-自己的数据集可以放在py-faster-rcnn/data/VOCdevkit2007/VOC2007中。
+### VOC2007数据集
+提供一个百度云地址：http://pan.baidu.com/s/1mhMKKw4
+解压，然后，将该数据集放在py-faster-rcnn/data下
+#### 自己的数据集
+自己的数据集可以放在py-faster-rcnn/data/VOCdevkit2007/VOC2007中（替换Annotations，ImageSets和JPEGImages）
 py-faster-rcnn/data/VOCdevkit2007/VOC2007/ImageSets/Main/trainval.txt存放训练的序号。
 py-faster-rcnn/data/VOCdevkit2007/VOC2007/ImageSets/Main/test.txt存放测试的序号。
 ### 修改类别参数
