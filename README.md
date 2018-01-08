@@ -1,5 +1,6 @@
 ## 概述
-根据RBG大神的faster-rcnn代码调整，主要是去除了标注越界错误，numpy更新错误以及cudnn7的支持。建议使用官方原生的python去编译caffe。具体命令顺序如下
+根据RBG大神的faster-rcnn代码调整，主要是去除了标注越界错误，numpy更新错误以及cudnn7的支持。建议使用官方原生的python去编译caffe。注意Makefile.config中默认OpenCV2，如是OpenCV3请取消该文件中的注释。
+具体命令顺序如下
 ```bash
 pip install cython  
 pip install easydict  
