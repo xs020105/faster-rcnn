@@ -44,7 +44,7 @@ py-faster-rcnn/models/pascal_voc/ZF/faster_rcnn_alt_opt/stage1_rpn_train.pt和st
 py-faster-rcnn/models/pascal_voc/ZF/faster_rcnn_alt_opt/faster_rcnn_test.pt修改cls_score层的num_output为类别数量加一。
 bbox_pred的num_output为类别数加一以后再乘4。
 ### 修改标签参数
-pascal_voc中需要修改自己的标签，标签请用小写字母。
+py-faster-rcnn/lib/datasets/pascal_voc.py中需要修改自己的标签，标签请用小写字母。
 ### 修改其他参数
 学习率等之类的设置，可在py-faster-rcnn/models/pascal_voc/ZF/faster_rcnn_alt_opt中的solve文件设置，迭代次数可在py-faster-rcnn/tools的train_faster_rcnn_alt_opt.py中修改。
 ## 开始训练
